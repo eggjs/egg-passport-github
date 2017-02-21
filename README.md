@@ -1,4 +1,4 @@
-# egg-passport-weibo
+# egg-passport-github
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -20,9 +20,7 @@
 [download-image]: https://img.shields.io/npm/dm/egg-passport-github.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-passport-github
 
-<!--
-Description here.
--->
+github passport plugin for egg
 
 ## Install
 
@@ -33,8 +31,8 @@ $ npm i egg-passport-github --save
 ## Usage
 
 ```js
-// {app_root}/config/plugin.js
-exports['passport-github'] = {
+// config/plugin.js
+exports.passportGithub = {
   enable: true,
   package: 'egg-passport-github',
 };
@@ -43,19 +41,14 @@ exports['passport-github'] = {
 ## Configuration
 
 ```js
-// {app_root}/config/config.default.js
-exports.passport = {
-  github: {
-
-  },
+// config/config.default.js
+exports.passportGithub = {
+  key: 'your oauth key',
+  secret: 'your oauth secret',
 };
 ```
 
 see [config/config.default.js](config/config.default.js) for more detail.
-
-## Example
-
-<!-- example here -->
 
 ## Questions & Suggestions
 
