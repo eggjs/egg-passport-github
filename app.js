@@ -5,13 +5,15 @@ const assert = require('assert');
 const Strategy = require('passport-github').Strategy;
 
 module.exports = app => {
-  const config = app.config.passport.github;
+  const config = app.config.passportGithub;
   config.passReqToCallback = true;
-  assert(config.clientID, '[egg-passport-github] config.passport.github.clientID required');
-  assert(config.clientSecret, '[egg-passport-github] config.passport.github.clientSecret required');
+  assert(config.key, '[egg-passport-github] config.passportGithub.key required');
+  assert(config.secret, '[egg-passport-github] config.passportGithub.secret required');
+  config.clientID = config.key;
+  config.clientSecret = config.secret;
 
   // must require `req` params
-  app.passport.use(new Strategy(config, (req, accessToken, refreshToken, params, profile, done) => {
+  app.passport.use('github', new Strategy(config, (req, accessToken, refreshToken, params, profile, done) => {
     // format user
     const user = {
       provider: 'github',

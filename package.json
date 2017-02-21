@@ -1,9 +1,9 @@
 {
   "name": "egg-passport-github",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "github passport plugin for egg",
   "eggPlugin": {
-    "name": "passport-github",
+    "name": "passportGithub",
     "dependencies": [
       "passport"
     ]
@@ -12,7 +12,8 @@
     "egg",
     "eggPlugin",
     "egg-plugin",
-    "egg-passport"
+    "egg-passport",
+    "passport-github"
   ],
   "dependencies": {
     "debug": "^2.6.1",
@@ -21,10 +22,11 @@
   "devDependencies": {
     "autod": "^2.7.1",
     "egg": "^0.12.0",
-    "egg-bin": "^2.2.0",
+    "egg-bin": "^2.2.1",
     "egg-ci": "^1.1.0",
     "egg-mock": "^3.0.0",
-    "eslint": "^3.15.0",
+    "egg-passport": "^1.0.0",
+    "eslint": "^3.16.0",
     "eslint-config-egg": "^3.2.0",
     "supertest": "^3.0.0",
     "webstorm-disable-index": "^1.1.2"
@@ -41,12 +43,8 @@
     "autod": "autod"
   },
   "files": [
-    "index.js",
     "app.js",
-    "agent.js",
-    "config",
-    "app",
-    "lib"
+    "config"
   ],
   "ci": {
     "version": "6, 7"
