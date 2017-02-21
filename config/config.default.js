@@ -1,9 +1,7 @@
 'use strict';
 
-exports.passport = {
-  github: {
-    clientID: '',
-    clientSecret: '',
-    callbackURL: '/passport/github/callback',
-  },
+exports.passportGithub = {
+  key: '',
+  secret: '',
+  callbackURL: '/passport/github/callback',
 };
